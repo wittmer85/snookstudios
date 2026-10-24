@@ -1,0 +1,7 @@
+title: Snook Studios LLC
+description: Software and mobile app development in Melbourne, FL.
+theme: jekyll-theme-minimal
+url: https://wittmer85.github.io
+baseurl: /snookstudios
+exclude:
+  - README.md

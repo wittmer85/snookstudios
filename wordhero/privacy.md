@@ -90,13 +90,11 @@ The App Store category is Education. Made for Kids is off. Ads stay child-direct
 
 ## Children’s privacy
 
-Word Hero is designed for children. Snook Studios LLC does not knowingly collect personal information from children. Ads are served as child-directed and non-personalized, per COPPA, via Google’s tag for child-directed treatment. A parent can contact **[support email]** to ask a question or to request deletion of any information. Snook Studios LLC holds no data from the app, because word lists, quiz history, and voice settings stay on the device.
+Word Hero is designed for children. Snook Studios LLC does not knowingly collect personal information from children. Ads are served as child-directed and non-personalized, per COPPA, via Google’s tag for child-directed treatment. A parent can contact [snookstudiosllc@outlook.com](mailto:snookstudiosllc@outlook.com) to ask a question or to request deletion of any information. Snook Studios LLC holds no data from the app, because word lists, quiz history, and voice settings stay on the device.
 
 ## Contact
 
-<!-- PLACEHOLDER: the next line is the support email. Replace that same token everywhere in this file before publishing. -->
-
-**[support email]**
+[snookstudiosllc@outlook.com](mailto:snookstudiosllc@outlook.com)
 
 Snook Studios LLC
 

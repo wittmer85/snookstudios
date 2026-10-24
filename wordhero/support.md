@@ -37,8 +37,6 @@ Use that same Apple ID after the app is deleted and installed again. The App Sto
 
 ## Contact
 
-<!-- PLACEHOLDER: the next line is the support email. Replace that same token everywhere in this file before publishing. -->
-
-**[support email]**
+[snookstudiosllc@outlook.com](mailto:snookstudiosllc@outlook.com)
 
 Snook Studios LLC

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choose a spreadsheet</title>
+  <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body style="margin:0;font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#f2f2f6;color:#17202a;">
+  <p id="status" style="padding:24px;">Opening Google Drive…</p>
+  <script>
+    function params() {
+      return new URLSearchParams((window.location.hash || "").replace(/^#/, ""));
+    }
+    function back(query) {
+      window.location = "bittofit://picker?" + query;
+    }
+    function showPicker() {
+      var query = params();
+      var token = query.get("token") || "";
+      var key = query.get("key") || "";
+      var appId = query.get("appId") || "";
+      if (!token || !key || !appId) {
+        document.getElementById("status").textContent = "This page was opened without a BitToFit sign-in.";
+        return;
+      }
+      var origin = window.location.protocol + "//" + window.location.host;
+      var view = new google.picker.DocsView(google.picker.ViewId.SPREADSHEETS);
+      view.setMimeTypes("application/vnd.google-apps.spreadsheet");
+      view.setMode(google.picker.DocsViewMode.LIST);
+      var picker = new google.picker.PickerBuilder()
+        .setAppId(appId)
+        .setOAuthToken(token)
+        .setDeveloperKey(key)
+        .setOrigin(origin)
+        .addView(view)
+        .setCallback(function (data) {
+          if (data.action === google.picker.Action.PICKED && data.docs && data.docs.length) {
+            back("id=" + encodeURIComponent(data.docs[0].id));
+          } else if (data.action === google.picker.Action.CANCEL) {
+            back("cancel=1");
+          }
+        })
+        .build();
+      picker.setVisible(true);
+    }
+    gapi.load("picker", { callback: showPicker });
+  </script>
+</body>
+</html>
